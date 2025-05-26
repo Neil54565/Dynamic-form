@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Form</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h2>User Form</h2>
+<form id="userForm">
+  <table border="1" id="formTable">
+    <thead>
+      <tr><th>Name</th><th>Email</th><th>Mobile</th><th>Gender</th><th>Action</th></tr>
+    </thead>
+    <tbody id="formBody">
+      <tr class="formRow">
+        <td><input type="text" name="name[]" required></td>
+        <td><input type="email" name="email[]" required></td>
+        <td><input type="text" name="mobile[]" maxlength="10" required></td>
+        <td>
+          <select name="gender[]" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </td>
+        <td><button type="button" class="deleteRow">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" id="addMore">Add More</button>
+  <button type="submit">Submit</button>
+</form>
+<p id="message"></p>
+<script src="script.js"></script>
+</body>
+</html>
